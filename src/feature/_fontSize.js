@@ -31,8 +31,8 @@ chrome.storage.sync.get("fontSizeSetting", function (data) {
 
         // Inject CSS stylesheet into iframe
         let css = document.createElement('style');
-        css.type = 'text/css';
-        css.textContent = `.ͼ1 .cm-line, [data-diffy-attribute] span {
+        //css.textContent = `.ͼ1 .cm-line, [data-diffy-attribute] span {
+        css.textContent = `.ͼ1 .cm-line {
           font-size: ${fontSize}px !important;
         }`
 

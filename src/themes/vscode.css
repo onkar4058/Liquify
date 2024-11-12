@@ -30,11 +30,12 @@
   --cm-liquid-filter: #dcdcaa;
   --cm-number: #b5cea8;
 
-  --notification-icon : #ebe0e0;
+  --notification-icon: #ebe0e0;
   --action-list-hover: #5c5858;
 }
 
-[p-color-scheme="dark"], body.dark {
+[p-color-scheme="dark"],
+body.dark {
   color-scheme: dark !important;
   --p-color-bg: #202123 !important;
   --p-color-bg-input: #2f3133 !important;
@@ -64,25 +65,30 @@
   background: rgb(37, 37, 38) !important;
 }
 
-[placeholder="Enhanced search loading..."] + div::after {
+[placeholder="Enhanced search loading..."]+div::after {
   background: rgb(37, 37, 38) !important;
 }
 
 [data-diffy-attribute="tablist"] [data-diffy-attribute][aria-selected="true"] {
   background: var(--p-surface-pressed);
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
 }
 
-[data-diffy-attribute] [class*="selected"] button, [data-diffy-attribute] [aria-labelledby]:hover {
+[data-diffy-attribute] [class*="selected"] button,
+li [data-diffy-attribute] [aria-labelledby]:hover {
   background-color: #363636 !important;
 }
+
 [data-diffy-attribute="search"] input[placeholder="Search files..."],
 [data-diffy-attribute="search"] input[placeholder="Search files..."]:hover,
 [data-diffy-attribute="search"] input[placeholder="Search files..."]:focus,
-[data-diffy-attribute="search"] input[placeholder="Search files..."]:active{
+[data-diffy-attribute="search"] input[placeholder="Search files..."]:active {
   background-color: #363636 !important;
 }
+
 [data-diffy-attribute="search"] [class^="Polaris-TextField_"] [class^="Polaris-TextField__Backdrop_"]:after,
-[data-diffy-attribute="search"] [class^="Polaris-TextField_"] [class^="Polaris-TextField__Backdrop_"]{
+[data-diffy-attribute="search"] [class^="Polaris-TextField_"] [class^="Polaris-TextField__Backdrop_"] {
   background-color: #363636 !important;
 }
 
@@ -90,7 +96,7 @@
   filter: invert(1);
 }
 
-#liquify-search + div {
+#liquify-search+div {
   background: var(--p-color-bg-app) !important;
 }
 
@@ -98,20 +104,23 @@
   padding-left: 0.5rem;
 }
 
-[p-color-scheme="dark"] [class^="Polaris-Button_"]{
+[p-color-scheme="dark"] [class^="Polaris-Button_"] {
   padding: 0 5px;
 }
+
 [p-color-scheme="dark"] [class^="Polaris-Button_"] {
   background: rgb(37, 37, 38) !important;
 }
 
 [p-color-scheme="dark"] .Polaris-Button_r99lw.Polaris-Button--variantPrimary_1stsb,
-[p-color-scheme="dark"] .Polaris-Button_r99lw.Polaris-Button--variantPrimary_1stsb *{
+[p-color-scheme="dark"] .Polaris-Button_r99lw.Polaris-Button--variantPrimary_1stsb * {
   background: none !important;
 }
-[p-color-scheme="dark"] [class^="Polaris-Button_"] span{
+
+[p-color-scheme="dark"] [class^="Polaris-Button_"] span {
   font-size: 12px !important;
 }
+
 [p-color-scheme="dark"] [class^="Polaris-Button_"][aria-disabled="true"] {
   border: 1px solid #ccc;
 }
@@ -125,39 +134,51 @@
 .ͼ1g {
   color: var(--cm-def) !important;
 }
+
 .ͼ17 {
   color: var(--cm-string) !important;
 }
+
 .ͼ19 {
   color: var(--cm-capture) !important;
 }
+
 .ͼ1b {
   color: var(--cm-def) !important;
 }
+
 .ͼ1c {
   color: var(--cm-builtin) !important;
 }
+
 .ͼ16 {
   color: var(--cm-string) !important;
 }
+
 .ͼ1d {
   color: var(--cm-liquid-bracket) !important;
 }
+
 .ͼ1e {
   color: var(--cm-bracket) !important;
 }
+
 .ͼ1a {
   color: var(--cm-capture) !important;
 }
+
 .ͼ1f {
   color: var(--cm-def) !important;
 }
+
 .ͼ18 {
   color: var(--cm-comment) !important;
 }
+
 .ͼ15 {
   color: var(--cm-number) !important;
 }
+
 .ͼ1h {
   color: var(--cm-line) !important;
 }
@@ -202,7 +223,8 @@ button[name="close"] {
   border-right: none;
 }
 
-.ͼ2.cm-focused .cm-selectionBackground, .ͼ2 .cm-selectionBackground {
+.ͼ2.cm-focused .cm-selectionBackground,
+.ͼ2 .cm-selectionBackground {
   background: var(--selected) !important;
 }
 
@@ -310,46 +332,68 @@ button[name="close"] {
 .ͼn {
   color: #f00 !important;
 }
+
 .Online-Store-UI-NavItem--hasIndicator_zoaah .Online-Store-UI-NavItem__PrimaryAction_12jax:before {
-    background-color: var(--notification-icon) !important;
+  background-color: var(--notification-icon) !important;
 }
+
 [data-buttongroup-variant=segmented]>:last-child:hover,
-[data-buttongroup-variant=segmented]>:last-child [aria-expanded="true"]{
+[data-buttongroup-variant=segmented]>:last-child [aria-expanded="true"] {
   /* box-shadow: inset 0 -0.0625rem 0 #b5b5b5,inset -0.0625rem 0 0 #e3e3e3,inset 0.0625rem 0 0 #e3e3e3,inset 0 0.0625rem 0 #e3e3e3 !important; */
   border-bottom-right-radius: 0.5em !important;
   border-top-right-radius: 0.5em !important;
 }
+
 [data-buttongroup-variant=segmented]>:not(:last-child) [class^="Polaris-Button_"] {
   --pc-button-box-shadow: 0;
   border: 1px solid;
 }
-[class^="Online-Store-UI-ExitAction__Content_"]:hover{
+
+[class^="Online-Store-UI-ExitAction__Content_"]:hover {
   color: #fff !important;
 }
-[class^="Online-Store-UI-ExitAction_"] svg path{
+
+[class^="Online-Store-UI-ExitAction_"] svg path {
   fill: #fff !important;
 }
+
 [class^="Online-Store-UI-PlainAction__"] svg,
 [class^="Online-Store-UI-PlainAction__"] svg:hover {
   fill: #fff;
 }
+
 [class^="Polaris-ActionList__Item_"]:hover {
   background-color: var(--action-list-hover) !important;
 }
-a[class^="Polaris-Button_"][target="_blank"]:first-child{
+
+a[class^="Polaris-Button_"][target="_blank"]:first-child {
   border: 1px solid #fff;
   --pc-button-box-shadow: 0px;
 }
+
 [aria-label="Options"][type="button"],
-[aria-label="Options"][data-state="open"][type="button"]{
+[aria-label="Options"][data-state="open"][type="button"] {
   box-shadow: unset !important;
   --pc-button-box-shadow: 0px;
   border: 1px solid;
 }
+
 [class^="Polaris-Popover_"]:before {
   box-shadow: 0px 0px 0px 1px #cccccc80 inset !important;
 }
+
 [class^="Polaris-Button_"] svg,
 [class^="Polaris-Button_"] svg:hover {
   fill: #fff !important;
+}
+
+[data-buttongroup-variant=segmented]>:not(:first-child) .Polaris-Button {
+  background: transparent !important;
+}
+
+a.Polaris-Button.Polaris-Button--pressable.Polaris-Button--variantSecondary.Polaris-Button--sizeMedium.Polaris-Button--textAlignCenter {
+  background: transparent;
+  border: 1px solid #fff;
+  outline: none;
+  box-shadow: none;
 }

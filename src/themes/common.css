@@ -30,7 +30,10 @@
   display: block;
   padding: 0 2px 0 4px;
   font-family: Menlo, Monaco, "Courier New", monospace !important;
-  line-height: 18px !important;
+  line-height: 22px !important;
+}
+.h6h4J:not(.hcRBm) {
+    background-color: transparent !important;
 }
 
 .cm-theme-light {

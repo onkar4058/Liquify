@@ -1,3 +1,7 @@
+:root {
+  --p-color-bg-fill-brand-active: #fff !important;
+}
+
 [data-diffy-attribute="tablist"] {
   display: inline-table;
 }
@@ -16,21 +20,43 @@
   right: 5px;
   fill: grey;
 }
+
 [p-color-scheme="dark"] [data-diffy-attribute="tablist"] [role="presentation"] button:nth-child(2):hover {
-  background-color: #a79797;
+  /* background-color: #a79797; */
+  background-color: transparent;
 }
-[p-color-scheme="dark"] [data-diffy-attribute="versionsLayoutGroup"] button:hover{
+
+[p-color-scheme="dark"] [data-diffy-attribute="versionsLayoutGroup"] button:hover {
   background-color: #1c1b1be0;
 }
-[data-diffy-attribute="tablist"] [role="presentation"] button:nth-child(2) span:not([class^="Polaris-Icon"]) {
-  background-color: #fff !important;
-}
-button:has('.Polaris-Button--disabled_'){
+
+/*[data-diffy-attribute="tablist"] [role="presentation"] button:nth-child(2) span:not([class^="Polaris-Icon"]) {
+   background-color: #fff !important;
+}*/
+button:has('.Polaris-Button--disabled_') {
   --pc-button-box-shadow: 0px;
 }
-[data-diffy-attribute="versionsLayoutGroup"] span[class^="Polaris-Text--root_"]{
+
+[data-diffy-attribute="versionsLayoutGroup"] span[class^="Polaris-Text--root_"] {
   font-size: 14px !important
 }
+
 [data-diffy-attribute="versionsLayoutGroup"] {
-    display: flex;
+  display: flex;
+}
+
+[role="tab"].is-liquid,
+[role="tab"].is-css,
+[role="tab"].is-js,
+[role="tab"].is-json {
+  font-size: 12px;
+}
+
+button.eLWpb.hUFhI span:last-child {
+  margin-left: 2px;
+  margin-top: 4px;
+}
+
+.h6h4J:first-child {
+  border-left: .0625rem solid var(--p-color-border-secondary);
 }
