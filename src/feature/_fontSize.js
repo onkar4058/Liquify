@@ -2,8 +2,7 @@ chrome.storage.sync.get("fontSizeSetting", function (data) {
   let fontSize = 12;
   window.fontloaded = false;
 
-  if (data.fontSizeSetting)
-    fontSize = data.fontSizeSetting;
+  if (data.fontSizeSetting) fontSize = data.fontSizeSetting;
 
   (() => {
     injectFont = () => {
@@ -30,11 +29,13 @@ chrome.storage.sync.get("fontSizeSetting", function (data) {
         window.fontloaded = true;
 
         // Inject CSS stylesheet into iframe
-        let css = document.createElement('style');
+        let css = document.createElement("style");
+        css.type = "text/css";
         //css.textContent = `.ͼ1 .cm-line, [data-diffy-attribute] span {
         css.textContent = `.ͼ1 .cm-line {
           font-size: ${fontSize}px !important;
-        }`
+          font-weight: 400 !important;
+        }`;
 
         frameDocument.body.appendChild(css);
       }, 500);

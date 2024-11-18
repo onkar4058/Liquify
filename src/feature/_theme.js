@@ -31,12 +31,6 @@
       cssLink.rel = "stylesheet";
       cssLink.type = "text/css";
       frameDocument.body.appendChild(cssLink);
-
-      if (theme != "common")
-        frameDocument.body
-          .querySelector("#app")
-          .firstElementChild.setAttribute("p-color-scheme", "dark");
-      frameDocument.body.classList.add("dark");
     }, 500);
   };
 
@@ -45,17 +39,17 @@
       // Fallback to vscode if no default theme has been chosen
       let chosenTheme =
         (data.chosenTheme && data.chosenTheme.toLowerCase()) || "vscode";
-      chosenTheme != "none" && setTheme(chosenTheme);
-      setTheme("common");
+
+      if (chosenTheme != "none") {
+        setTheme(chosenTheme);
+        setTheme("common");
+      }
     });
   };
 
   // Detect page change
   let previousUrl = "";
   const observer = new MutationObserver(() => {
-    let iframeTo = document.querySelector(`main iframe`);
-    let frameDocument = (iframeTo && iframeTo.contentDocument) || document;
-
     if (location.href !== previousUrl) {
       previousUrl = location.href;
       if (
@@ -63,23 +57,6 @@
         !location.href.includes("editor")
       ) {
         getTheme();
-        try {
-          chrome.storage.sync.get("chosenTheme", function (data) {
-            typeof data.chosenTheme == "undefined" ||
-              (data.chosenTheme.toLowerCase() != "none" &&
-                frameDocument
-                  .querySelector("#app")
-                  .firstElementChild.setAttribute("p-color-scheme", "dark"));
-            frameDocument.body.classList.add("dark");
-          });
-        } catch (error) {}
-      } else {
-        try {
-          frameDocument
-            .querySelector("#app")
-            .firstElementChild.setAttribute("p-color-scheme", "light");
-          frameDocument.body.classList.remove("dark");
-        } catch (error) {}
       }
     }
   });

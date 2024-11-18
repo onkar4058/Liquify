@@ -1,110 +1,333 @@
-/* Autocomplete */
-#autocomplete {
-  min-width: 200px;
-  position: fixed;
-  z-index: 9;
-  top: 0;
-  left: 0;
-  width: 400px;
-  max-height: 300px;
-  overflow-y: scroll;
-  opacity: 0.95;
-}
-#autocomplete li {
-  list-style: none;
-}
-.input-highlight {
-  font-weight: bold;
-}
-#autocomplete {
-  color: white;
-  background: var(--tab-background);
-  border: 1px solid var(--search-border);
-}
-#autocomplete li.active,
-[data-word]:hover {
-  background: #00304c;
+:root {
+  --borders: #2b2b2b;
 }
 
-.ͼ1 .cm-line {
-  display: block;
-  padding: 0 2px 0 4px;
-  font-family: Menlo, Monaco, "Courier New", monospace !important;
-  line-height: 22px !important;
-}
-.h6h4J:not(.hcRBm) {
-    background-color: transparent !important;
+[data-diffy-attribute] {
+  &[data-diffy-attribute="header"] {
+    border-bottom: 1px solid var(--borders);
+
+    [class*="Online-Store-UI-TopBar"]:first-child {
+      background-color: var(--mtk2) !important;
+      color: var(--mtk1);
+    }
+  }
+
+  [class*="Online-Store-UI-TopBar"]:has([class*="Online-Store-UI-TopBar-LayoutGroup"]):has([class*="Online-Store-UI-TopBar-LayoutGroup"]) {
+    height: auto !important;
+    padding: 5px 0 !important;
+  }
+
+  &[data-diffy-attribute="sidebar"] {
+    background: transparent !important;
+    color: var(--mtk1);
+  }
+
+  &[data-diffy-attribute="main"] {
+    background-color: var(--sidebar-background) !important;
+
+    [role="presentation"] {
+      border-radius: 0 !important;
+      background-color: var(--sidebar-background) !important;
+      border: 1px solid var(--borders) !important;
+
+      span {
+        color: var(--mtk1) !important;
+      }
+
+      button {
+        margin: 0 !important;
+
+        .Polaris-LegacyIcon__Icon {
+          /* align-self: baseline !important; */
+        }
+
+        &:hover {
+          background-color: var(--borders) !important;
+
+          svg {
+            fill: white;
+          }
+        }
+      }
+
+      /* active tab class */
+      &.hcRBm {
+        background-color: var(--mtk2) !important;
+        border-top: 1px solid var(--mtk6) !important;
+        border-bottom: none !important;
+      }
+    }
+  }
 }
 
-.cm-theme-light {
-  height: 100%;
+[class*="Online-Store-UI"] {
+
+  &[class*="StaticPanel-Layout"],
+  &[class*="Frame-MainArea"] {
+    background-color: var(--sidebar-background) !important;
+  }
+
+  &[class*="SortableList"] {
+    background: transparent !important;
+    color: var(--mtk1);
+  }
+
+  &[class*="NavItem--selected"] {
+    background-color: var(--vscode-list-inactiveSelectionBackground) !important;
+    color: var(--vscode-list-warningForeground) !important;
+
+    button {
+      background-color: var(--vscode-list-inactiveSelectionBackground) !important;
+      color: var(--vscode-list-warningForeground) !important;
+    }
+  }
+
+  [class*="Online-Store-UI-NavItem"] {
+    button:hover {
+      background-color: var(--vscode-list-inactiveSelectionBackground) !important;
+    }
+  }
 }
 
-[data-diffy-attribute="search"].search-loading svg {
-  animation-name: ckw;
-  animation-duration: 2s;
-  fill: orange;
-  animation-iteration-count: infinite;
+[role="tabpanel"] {
+  border: none !important;
+
+  * {
+    border: none !important;
+  }
+
+  [class*="Online-Store-UI-TopBar"] {
+    background-color: var(--mtk2) !important;
+    color: var(--mtk1) !important;
+  }
 }
+
+[class*="Online-Store-UI-Frame-Sidebar"] {
+  border: none !important;
+  border-right: 1px solid var(--borders) !important;
+}
+
+.Polaris-TextField__Backdrop {
+  display: none !important;
+}
+
+.cm-editor,
+.cm-gutter {
+  background-color: var(--mtk2) !important;
+}
+
+.cm-panels {
+  filter: invert(1) !important;
+}
+
+.Polaris-Box {
+  background-color: var(--mtk2) !important;
+  color: var(--mtk1) !important;
+}
+
+#liquify-search {
+  background-color: var(--mtk2) !important;
+  color: var(--mtk1) !important;
+  border: none !important;
+  font-size: 14px !important;
+  width: 100% !important;
+}
+
+div[class*="Online-Store-UI-NavItem"] {
+  height: 25px !important;
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+  [data-diffy-attribute="search"].search-loading .Polaris-Icon {
+    animation: ckw 2s linear infinite;
+    animation-duration: 2s !important;
+  }
+}
+
+[data-diffy-attribute="search"].search-loading .Polaris-Icon {
+  animation: ckw 2s linear infinite;
+  animation-duration: 2s !important;
+}
+
 @keyframes ckw {
   0% {
     transform: rotate(0deg);
   }
+
   100% {
     transform: rotate(360deg);
   }
 }
 
-[data-diffy-attribute="search"] svg {
-  fill: #2688ff;
+
+
+/* Codemirror colors */
+
+/* HTML */
+.ͼ1g {
+  color: var(--mtk14) !important;
 }
 
-[data-diffy-attribute] [class*="Interior"], [data-diffy-attribute] [class*="PrimaryAction"], [data-diffy-attribute] [class*="_Action_"] {
-  height: 1.2rem !important;
+.cm-line {
+  color: var(--mtk6) !important;
 }
 
-[data-diffy-attribute^="folder"] {
-  margin-top: 1rem !important;
+.ͼ1j {
+  color: var(--mtk6) !important;
 }
 
-[data-diffy-attribute^="folder"] ol {
-  margin-top: 0.3rem !important;
-}
-[data-diffy-attribute^="folder"] li {
-  margin-top: 1px !important;
+.ͼ1h {
+  color: var(--mtk10) !important;
 }
 
-[data-diffy-attribute] [class*="PrimaryAction"] [class*="Prefix"] {
-  height: 16px;
+.ͼ1d {
+  color: var(--mtk1) !important;
 }
 
-[data-diffy-attribute] [class*="TrailingContent"] {
-  height: 12px;
+.ͼ19 {
+  color: var(--mtk12) !important;
 }
 
-.cm-editor .cm-panels.cm-panels-bottom {
-  font-size: 16px;
-}
-span[class^='Online-Store-UI-NavItem'] span[class^='Polaris-Text'] {
-  font-size: 14px !important;
-}
-[class^='Online-Store-UI-PanelArea_']{
-  width: 15rem !important;
-}
-::-webkit-scrollbar-track{
-	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-	border-radius: 10px;
-	background-color: #F5F5F5;
+div:has(.Polaris-ShadowBevel) {
+  background-color: var(--mtk2) !important;
 }
 
-::-webkit-scrollbar{
-	width: 8px;
-  height: 8px;
-	background-color: #F5F5F5;
+.cm-cursor,
+.cm-dropCursor {
+  border-left: 1px solid white !important;
 }
 
-::-webkit-scrollbar-thumb{
-	border-radius: 12px;
-	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
-	background-color: #555;
+.cm-activeLine {
+  background-color: var(--mtk2) !important;
+}
+
+.cm-selectionBackground {
+  background: var(--mtk13) !important;
+  opacity: 0.2;
+}
+
+.cm-activeLineGutter {
+  background-color: var(--borders) !important;
+}
+
+.cm-tooltip {
+  filter: invert(1) !important;
+}
+.Polaris-Button {
+  background: var(--mtk2) !important;
+  color: var(--mtk1) !important;
+  border: none !important;
+  box-shadow: 0px 0px 0px 1px !important;
+}
+
+button[type="button"]:hover{
+  background-color: transparent !important;
+}
+.Polaris-ActionList__Item:hover {
+  background-color: transparent;
+}
+/* Liquid */
+.ͼ1c {
+  color: var(--mtk18) !important;
+}
+
+.ͼ1e {
+  color: var(--mtk6) !important;
+}
+
+.ͼ1e+.ͼ1f {
+  color: var(--mtk10) !important;
+}
+
+.ͼ1e+.ͼ1f+.ͼ1f {
+  color: var(--mtk10) !important;
+}
+
+.ͼ1f {
+  color: var(--bracket-highlighting-0) !important;
+}
+
+.cm-line .ͼ1f:not(:has(~ .ͼ1f)) {
+  color: var(--bracket-highlighting-0) !important;
+}
+
+.ͼ1b {
+  color: var(--mtk7) !important;
+}
+
+.ͼ1i {
+  color: var(--mtk16) !important;
+}
+
+.ͼ1a {
+  color: var(--mtk5) !important;
+}
+
+.ͼ18 {
+  color: var(--mtk6) !important;
+}
+
+/* JS */
+.ͼb {
+  color: var(--mtk6) !important;
+}
+
+.ͼg {
+  color: var(--mtk10) !important;
+}
+
+.ͼe {
+  color: var(--mtk12) !important;
+}
+
+.ͼm {
+  color: var(--mtk5) !important;
+}
+
+.ͼg+.ͼg {
+  color: var(--mtk16) !important;
+}
+
+.ͼc {
+  color: var(--mtk6) !important;
+}
+
+.ͼf {
+  color: var(--mtk12) !important;
+}
+
+.ͼl {
+  color: var(--mtk10) !important;
+}
+
+.ͼd {
+  color: var(--mtk7) !important;
+}
+
+/* CSS */
+.ͼj,
+.ͼi {
+  color: var(--mtk9) !important;
+}
+
+[data-language="css"] {
+  .cm-line {
+    color: var(--mtk10) !important;
+  }
+
+  .ͼb {
+    color: var(--mtk16) !important;
+  }
+
+  .ͼd {
+    color: var(--mtk10) !important;
+  }
+
+  .ͼc {
+    color: var(--mtk12) !important;
+  }
+
+  .cm-line .ͼb:first-child:has(~ .ͼb) {
+    color: var(--mtk18) !important;
+  }
 }

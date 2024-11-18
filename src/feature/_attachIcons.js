@@ -41,33 +41,43 @@
         );
         // Apply icon classes to file elements
         for (let file of fileList) {
-          let fileIcon = file.querySelector("svg");
+          let fileIcons = file.querySelectorAll("svg");
 
           switch (true) {
             case file.getAttribute("data-diffy-attribute").includes(".json"):
-              fileIcon.style.fill = "orange";
-              fileIcon.style.display = "inline";
+              fileIcons.forEach((icon) => {
+                icon.style.fill = "orange";
+                icon.style.display = "inline";
+              });
               break;
             case file.getAttribute("data-diffy-attribute").includes(".js") ||
               file.getAttribute("data-diffy-attribute").includes(".js.liquid"):
-              fileIcon.parentNode.classList.add("is-js");
-              fileIcon.style.display = "none";
+              fileIcons.forEach((icon) => {
+                icon.parentNode.classList.add("is-js");
+                icon.style.display = "none";
+              });
               break;
             case file.getAttribute("data-diffy-attribute").includes(".scss") ||
               file
                 .getAttribute("data-diffy-attribute")
                 .includes(".scss.liquid"):
-              fileIcon.parentNode.classList.add("is-scss");
-              fileIcon.style.display = "none";
+              fileIcons.forEach((icon) => {
+                icon.parentNode.classList.add("is-scss");
+                icon.style.display = "none";
+              });
               break;
             case file.getAttribute("data-diffy-attribute").includes(".css") ||
               file.getAttribute("data-diffy-attribute").includes(".css.liquid"):
-              fileIcon.parentNode.classList.add("is-css");
-              fileIcon.style.display = "none";
+              fileIcons.forEach((icon) => {
+                icon.parentNode.classList.add("is-css");
+                icon.style.display = "none";
+              });
               break;
             case file.getAttribute("data-diffy-attribute").includes(".liquid"):
-              fileIcon.style.fill = "rgb(140, 190, 70)";
-              fileIcon.style.display = "inline";
+              fileIcons.forEach((icon) => {
+                icon.style.fill = "rgb(140, 190, 70)";
+                icon.style.display = "inline";
+              });
               break;
           }
         }
