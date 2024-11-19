@@ -60,3 +60,14 @@ button.eLWpb.hUFhI span:last-child {
 .h6h4J:first-child {
   border-left: .0625rem solid var(--p-color-border-secondary);
 }
+
+.Online-Store-UI-LayoutGroup-Item_cqdv4 button.Polaris-Button.Polaris-Button--pressable.Polaris-Button--variantSecondary.Polaris-Button--sizeMedium.Polaris-Button--textAlignCenter {
+  background: transparent;
+  box-shadow: none;
+  border: 1px solid;
+  height: 1px;
+}
+
+button.Online-Store-UI-NavItem__PrimaryAction_eiqvh:hover {
+  background: transparent;
+}

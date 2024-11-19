@@ -14,7 +14,7 @@
 
   [class*="Online-Store-UI-TopBar"]:has([class*="Online-Store-UI-TopBar-LayoutGroup"]):has([class*="Online-Store-UI-TopBar-LayoutGroup"]) {
     height: auto !important;
-    padding: 5px 0 !important;
+    padding: 5px !important;
   }
 
   &[data-diffy-attribute="sidebar"] {
@@ -79,7 +79,7 @@
     button {
       background-color: var(--vscode-list-inactiveSelectionBackground) !important;
       color: var(--vscode-list-warningForeground) !important;
-      height: 1px;
+      height: 100%;
     }
   }
 
@@ -142,7 +142,7 @@
 }
 
 div[class*="Online-Store-UI-NavItem"] {
-  height: 25px !important;
+  height: 30px !important;
 }
 
 @media screen and (prefers-reduced-motion: reduce) {
@@ -164,6 +164,15 @@ div[class*="Online-Store-UI-NavItem"] {
 
   100% {
     transform: rotate(360deg);
+  }
+}
+
+div[role="tabpanel"] {
+  div[class*="Online-Store-UI-TopBar-LayoutGroup--alignRight"] {
+    padding-right: 0px;
+    svg{
+      fill: #fff;
+    }
   }
 }
 
@@ -243,9 +252,9 @@ div[class*="Online-Store-UI-TopBar"] {
   }
 }
 
-button[type="button"]:hover {
+/* button[type="button"]:hover {
   background-color: transparent !important;
-}
+} */
 
 .Polaris-ActionList__Item:hover {
   background-color: transparent;
